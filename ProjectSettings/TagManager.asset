@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - plataformas
+  - caixas
+  - ativador
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - plataformas
+  - agua
+  - ativador
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: plataformas
+    uniqueID: 2109168503
+    locked: 0
+  - name: caixas
+    uniqueID: 1718005451
+    locked: 0
+  - name: agua
+    uniqueID: 1974340187
+    locked: 0
+  - name: ativador
+    uniqueID: 2089510657
+    locked: 0
+  - name: New Layer
+    uniqueID: 3913494993
+    locked: 0
