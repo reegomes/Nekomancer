@@ -21,9 +21,8 @@ GameObject:
   - component: {fileID: 4587909874675534}
   - component: {fileID: 212896481995681830}
   - component: {fileID: 58779365268120346}
-  - component: {fileID: 114221844312922812}
   - component: {fileID: 50111359912600024}
-  - component: {fileID: 114940019246391064}
+  - component: {fileID: 114272304243503546}
   m_Layer: 12
   m_Name: boladefogo
   m_TagString: tiro
@@ -79,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: -0.4354678, y: 0.16199982}
   serializedVersion: 2
   m_Radius: 1.2321613
---- !u!114 &114221844312922812
+--- !u!114 &114272304243503546
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -87,26 +86,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1931673187858452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ce54eabf82472b49b1a4bda5240efc9, type: 3}
+  m_Script: {fileID: 11500000, guid: 26193252d73f70f44948963af4ea1755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0.1
-  tiro: {fileID: 0}
-  zRotation: 5
---- !u!114 &114940019246391064
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1931673187858452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ce54eabf82472b49b1a4bda5240efc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 0.1
-  tiro: {fileID: 1931673187858452}
-  zRotation: 5
+  vel: 2.5
+  municao: {fileID: 1931673187858452}
 --- !u!212 &212896481995681830
 SpriteRenderer:
   m_ObjectHideFlags: 1

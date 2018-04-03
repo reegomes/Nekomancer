@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Tiros : MonoBehaviour {
-
+    /*
     // Use this for initialization
     public float timer = 0.1f;
     public GameObject tiro;
@@ -35,5 +35,5 @@ public class Tiros : MonoBehaviour {
         {
             Instantiate(tiro, new Vector3(2.0f, 0, 0), Quaternion.identity);
         }
-    }
+    }*/
 }

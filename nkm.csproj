@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{301B59CE-03DB-1922-56CA-E2D4EE46B402}</ProjectGuid>
+    <ProjectGuid>{8C9DF961-E5BA-0540-618F-5B0FB6080D59}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -247,12 +247,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Arma.cs" />
     <Compile Include="Assets\Scripts\Ativador.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\Scripts\ColisaoCaixas.cs" />
+    <Compile Include="Assets\Scripts\ColorAudio.cs" />
     <Compile Include="Assets\Scripts\Extras.cs" />
+    <Compile Include="Assets\Scripts\Municao.cs" />
     <Compile Include="Assets\Scripts\PerdeVidas.cs" />
     <Compile Include="Assets\Scripts\personagem.cs" />
+    <Compile Include="Assets\Scripts\Tiros.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

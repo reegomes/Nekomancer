@@ -198,9 +198,41 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.28706
       objectReference: {fileID: 0}
+    - target: {fileID: 1978121552187960, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
+      propertyPath: m_TagString
+      value: caixas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &80531396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 80531397}
+  m_Layer: 0
+  m_Name: BolaDeFogo
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &80531397
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80531396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.133, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1666704928}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &87564325
 Prefab:
   m_ObjectHideFlags: 0
@@ -386,6 +418,10 @@ Prefab:
     - target: {fileID: 4538717646907620, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.28706
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978121552187960, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
+      propertyPath: m_TagString
+      value: caixas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
@@ -1765,6 +1801,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.28706
       objectReference: {fileID: 0}
+    - target: {fileID: 1978121552187960, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
+      propertyPath: m_TagString
+      value: caixas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
   m_IsPrefabParent: 0
@@ -1945,7 +1985,7 @@ GameObject:
   - component: {fileID: 979229647}
   - component: {fileID: 979229648}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ColisorChao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2197,6 +2237,10 @@ Prefab:
         type: 2}
       propertyPath: m_SpriteTilingProperty.drawMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978121552187960, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
+      propertyPath: m_TagString
+      value: caixas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
@@ -3219,6 +3263,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.28706
       objectReference: {fileID: 0}
+    - target: {fileID: 1978121552187960, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
+      propertyPath: m_TagString
+      value: caixas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
   m_IsPrefabParent: 0
@@ -3306,6 +3354,10 @@ Prefab:
     - target: {fileID: 4538717646907620, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.28706
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978121552187960, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
+      propertyPath: m_TagString
+      value: caixas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
@@ -3395,6 +3447,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.28706
       objectReference: {fileID: 0}
+    - target: {fileID: 1978121552187960, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
+      propertyPath: m_TagString
+      value: caixas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
   m_IsPrefabParent: 0
@@ -3425,6 +3481,7 @@ GameObject:
   - component: {fileID: 1666704930}
   - component: {fileID: 1666704929}
   - component: {fileID: 1666704931}
+  - component: {fileID: 1666704932}
   m_Layer: 0
   m_Name: Personagem
   m_TagString: Untagged
@@ -3483,10 +3540,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1666704926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50.167, y: -2.77, z: 0}
+  m_LocalPosition: {x: 50.167, y: -2.65, z: 0}
   m_LocalScale: {x: 2.8788795, y: 2.7865062, z: 2.7865062}
   m_Children:
   - {fileID: 979229647}
+  - {fileID: 80531397}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3554,6 +3612,19 @@ MonoBehaviour:
     m_Bits: 0
   pulo: 350
   giraSprite: 1
+--- !u!114 &1666704932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1666704926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6d9cb4aab0648498f0aa86686cb570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  municao: {fileID: 1931673187858452, guid: cad1ecfbfdf467e489d509689c2ca074, type: 2}
+  arma: {fileID: 80531396}
 --- !u!4 &1755428081 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4932398199847236, guid: a56569b7ce885394498637f79e9bb550,
@@ -3913,6 +3984,10 @@ Prefab:
     - target: {fileID: 4538717646907620, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.28706
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978121552187960, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
+      propertyPath: m_TagString
+      value: caixas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
@@ -4566,6 +4641,10 @@ Prefab:
     - target: {fileID: 4538717646907620, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
       propertyPath: m_LocalScale.z
       value: 0.28706
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978121552187960, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
+      propertyPath: m_TagString
+      value: caixas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b43040a66843bb42871500c59ec24ae, type: 2}
