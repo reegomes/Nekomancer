@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Ativador : MonoBehaviour {
 
- void Start () {
+    void Start ()
+    {
 
- }
+    }
  
- void Update(){
-
- }
+    void Update()
+    {
+        
+    }
  
 }

@@ -6,21 +6,22 @@ using UnityEngine.SceneManagement;
 public class PerdeVidas : MonoBehaviour {
 
 	public Vector3 posicaoInicial;
-    public static int vidas = 7;
+    public static int vidas = 6;
     // Use this for initialization
-    void OnTriggerEnter2D(Collider2D other){
 
-		personagem.vidas--;
-
-		if (personagem.vidas == 0) 
-		{
-			SceneManager.LoadScene("GameOver");
-		}
-		else 
-		{
-			other.transform.position = posicaoInicial;
-		}
-
+    void OnCollisionEnter2D(Collision2D fimdatela)
+    {
+        PerdeVidas.vidas--;
+        if (fimdatela.gameObject.CompareTag("fundodatela") && PerdeVidas.vidas == 0)
+        {
+            Debug.Log("Perdeu uma vida?" + vidas);
+            SceneManager.LoadScene("GameOver");
+        }
+        else
+        {
+            Debug.Log("Perdeu uma vida, volta pra tela" + vidas);
+            fimdatela.transform.position = posicaoInicial;
+        }
 	}
 	void Start () {
 		

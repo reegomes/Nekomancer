@@ -15,10 +15,6 @@ public class ColisaoCaixas : MonoBehaviour
          Debug.Log("Colisão ok, falta ação das plataformas");
         // abaixarPlataforma == true;
         }
-        if (caixasacao.gameObject.CompareTag("tiro"))
-        {
-
-        }
     }
     void OnCollisionExit2D(Collision2D caixasacao)
     {

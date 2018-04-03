@@ -7,6 +7,8 @@ TagManager:
   - plataformas
   - caixas
   - ativador
+  - fundodatela
+  - tiro
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - plataformas
   - agua
   - ativador
-  - 
-  - 
+  - fundodatela
+  - tiro
   - 
   - 
   - 
@@ -56,6 +58,12 @@ TagManager:
   - name: ativador
     uniqueID: 2089510657
     locked: 0
-  - name: New Layer
+  - name: fundodatela
     uniqueID: 3913494993
+    locked: 0
+  - name: tiro
+    uniqueID: 2969567533
+    locked: 0
+  - name: New Layer
+    uniqueID: 2799440605
     locked: 0
