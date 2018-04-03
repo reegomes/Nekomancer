@@ -1,4 +1,4 @@
-# Nekomancer!
+# Nekomancer
 ## Fase Tutorial v1.0
 -
 Está é a primeira fase do jogo em desenvolvimento, existem muitos bugs para serem corrigidos ainda, estamos trabalhando.
