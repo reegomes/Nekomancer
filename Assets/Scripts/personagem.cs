@@ -13,14 +13,14 @@ public class personagem : MonoBehaviour
     public LayerMask plataforma; // marca o que é e o que não é plataforma
     public float pulo; // força do pulo
     public bool giraSprite = true; // gira o sprite caso ele vire de um lado para o outro
-
 	public static int vidas = 7;
-
+	public bool Upmovement;
 
     void Start()
     {
         //Inicia o animator
         //animator = GetComponent(Animator);
+		Upmovement = false;
     }
     void Update()
 	{ 
@@ -41,6 +41,14 @@ public class personagem : MonoBehaviour
 		{
 			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, pulo));
 		}
+        if (Upmovement == true)
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, pulo));
+            }
+            	GetComponent<Rigidbody2D>().AddForce(new Vector2(0, pulo--));
+        }
 	}
     void Flip()
 	{
@@ -48,5 +56,11 @@ public class personagem : MonoBehaviour
 		Vector3 scale = transform.localScale;
 		scale.x *= -1;
 		transform.localScale = scale;
+	}
+
+	public void Subir()
+	{
+        //float movimentoSubir = Input.GetAxis("Vertical");
+        //GetComponent<Rigidbody2D>().velocity = new Vector2(movimentoSubir * velocidade, GetComponent<Rigidbody2D>().velocity.x);
 	}
 }

@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4332472863105270}
   - component: {fileID: 212977472212751932}
-  - component: {fileID: 61355387860446812}
+  - component: {fileID: 61389257167935942}
   m_Layer: 8
   m_Name: chao
-  m_TagString: plataformas
+  m_TagString: plataforma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,14 +34,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1804386057659514}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.097244, y: -4.801853, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 65.23724, y: -4.6118536, z: 10}
   m_LocalScale: {x: 0.2463348, y: 0.24633479, z: 0.2463348}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61355387860446812
+--- !u!61 &61389257167935942
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -53,18 +53,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.04724884, y: -0.046871185}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.88, y: 3.88}
-    newSize: {x: 58.651875, y: 5.5092435}
+    newSize: {x: 99.53955, y: 5.5092435}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.88, y: 3.88}
+  m_Size: {x: 99.57941, y: 5.2860527}
   m_EdgeRadius: 0
 --- !u!212 &212977472212751932
 SpriteRenderer:
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 58.651875, y: 5.5092435}
+  m_Size: {x: 99.53955, y: 5.5092435}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
