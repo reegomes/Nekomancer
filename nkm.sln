@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nkm", "nkm.csproj", "{8C9DF961-E5BA-0540-618F-5B0FB6080D59}"
 EndProject
 Global
