@@ -2367,8 +2367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f661fda78d9b9d64ebf095da291b0842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pt: {fileID: 1666704928}
-  ct: {fileID: 1191900495}
+  dampTime: 0.5
+  target: {fileID: 1666704928}
 --- !u!114 &1191900497
 MonoBehaviour:
   m_ObjectHideFlags: 0
