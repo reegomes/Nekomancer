@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Escada : personagem {
-	bool Upmovement = false;
+	//bool Upmovement = false;
 	// Use this for initialization
 	void Start () {
 		
