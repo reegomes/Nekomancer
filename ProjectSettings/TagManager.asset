@@ -9,6 +9,8 @@ TagManager:
   - ativador
   - fundodatela
   - tiro
+  - escada
+  - plataforma
   layers:
   - Default
   - TransparentFX
@@ -23,7 +25,7 @@ TagManager:
   - ativador
   - fundodatela
   - tiro
-  - 
+  - Momochi
   - 
   - 
   - 
