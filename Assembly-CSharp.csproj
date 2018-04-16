@@ -61,8 +61,10 @@
      <Compile Include="Assets\Scripts\Espada.cs" />
      <Compile Include="Assets\Scripts\Extras.cs" />
      <Compile Include="Assets\Scripts\Municao.cs" />
+     <Compile Include="Assets\Scripts\ParaEscada.cs" />
      <Compile Include="Assets\Scripts\PerdeVidas.cs" />
      <Compile Include="Assets\Scripts\personagem.cs" />
+     <Compile Include="Assets\Scripts\TestePulo.cs" />
      <Compile Include="Assets\Scripts\Tiros.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/renato.souza/Documents/GitHub/nkm-Dev/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>

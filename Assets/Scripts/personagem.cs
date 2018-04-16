@@ -46,7 +46,8 @@ public class personagem : MonoBehaviour
 		{
 			Flip ();
 		}
-
+		
+		/*
 		noChao = Physics2D.OverlapCircle (verificaChao.position, raiodochao, plataforma);
 
 		if (noChao && Input.GetKeyDown (KeyCode.Space)) {
@@ -56,16 +57,8 @@ public class personagem : MonoBehaviour
 		} else 
 		{
 			animator.SetBool ("pulo", false);
-		}
+		}*/
 
-        /*if (Upmovement == true)
-        {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(0, pulo));
-            }
-            	GetComponent<Rigidbody2D>().AddForce(new Vector2(0, pulo--));
-        }*/
 	}
     void Flip()
 	{
@@ -77,7 +70,6 @@ public class personagem : MonoBehaviour
 
 	public void Subir()
 	{
-        //float movimentoSubir = Input.GetAxis("Vertical");
-        //GetComponent<Rigidbody2D>().velocity = new Vector2(movimentoSubir * velocidade, GetComponent<Rigidbody2D>().velocity.x);
-	}
+
+    }
 }
