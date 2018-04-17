@@ -8,14 +8,17 @@ bool podePular = false;
 public float forca = 250.0f;
 public int duplo = 2;
 public Rigidbody2D perso;
+Animator animator;
 
 void Update()
 {
     if (duplo > 0){
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space))
         {
         perso.AddForce(new Vector2(0, forca * Time.deltaTime), ForceMode2D.Impulse);
         duplo--;
+        //animator.SetBool("pulo", true);
+        //animator.SetBool("parado", false);
         }
     }
 }

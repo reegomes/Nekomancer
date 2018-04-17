@@ -16,12 +16,14 @@ public class personagem : MonoBehaviour
 	public static int vidas = 7;
 	public bool Upmovement;
 	public Animator animator;
+	public GameObject Espada;
 
     void Start()
     {
         //Inicia o animator
 		animator = GetComponent<Animator>();
 		Upmovement = false;
+		Espada.SetActive(false);
     }
     void Update()
 	{ 
@@ -46,18 +48,31 @@ public class personagem : MonoBehaviour
 		{
 			Flip ();
 		}
-		
-		/*
+				
 		noChao = Physics2D.OverlapCircle (verificaChao.position, raiodochao, plataforma);
 
-		if (noChao && Input.GetKeyDown (KeyCode.Space)) {
+		if (noChao && Input.GetKeyDown(KeyCode.Space)) {
 			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, pulo));
-			animator.SetBool ("pulo", true);
-			animator.SetBool ("parado", false);
-		} else 
-		{
-			animator.SetBool ("pulo", false);
-		}*/
+            animator.SetBool("pulo", true);
+            //animator.SetBool("parado", false);
+		} else {
+			//animator.SetBool ("pulo", false);
+            //animator.SetBool("parado", true);
+		}
+
+        // Teste Espada
+        if (Input.GetKey(KeyCode.C))
+        {
+            Espada.SetActive(true);
+            animator.SetBool("espada", true);
+            animator.SetBool("parado", false);
+        }
+        else
+        {
+            Espada.SetActive(false);
+            animator.SetBool("espada", false);
+        }
+
 
 	}
     void Flip()

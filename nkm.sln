@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nkm", "nkm.csproj", "{8C9DF961-E5BA-0540-618F-5B0FB6080D59}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nkm", "Assembly-CSharp.csproj", "{5DFA87D5-8E5E-87B5-F076-84DB098D629C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8C9DF961-E5BA-0540-618F-5B0FB6080D59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C9DF961-E5BA-0540-618F-5B0FB6080D59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C9DF961-E5BA-0540-618F-5B0FB6080D59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C9DF961-E5BA-0540-618F-5B0FB6080D59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFA87D5-8E5E-87B5-F076-84DB098D629C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFA87D5-8E5E-87B5-F076-84DB098D629C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFA87D5-8E5E-87B5-F076-84DB098D629C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFA87D5-8E5E-87B5-F076-84DB098D629C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
