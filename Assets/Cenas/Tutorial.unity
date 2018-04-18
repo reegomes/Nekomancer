@@ -1532,7 +1532,7 @@ Animator:
   m_GameObject: {fileID: 709373940}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 30e43fbeabe9da14f8bb3418fe1597e9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 48caea6f3d1d1a84ca0871cdcd1fa2cd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2917,17 +2917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e9fbdce7d3becf459fde6d541cc7aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidade: 0
-  noChao: 0
-  verificaChao: {fileID: 0}
-  plataforma:
-    serializedVersion: 2
-    m_Bits: 0
-  pulo: 0
-  giraSprite: 1
-  Upmovement: 0
-  animator: {fileID: 0}
-  Espada: {fileID: 0}
+  sobe: 0
 --- !u!1 &1277207370 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1978121552187960, guid: 7b43040a66843bb42871500c59ec24ae,
@@ -4060,7 +4050,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1666704926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 57.31, y: 10.62, z: 0}
+  m_LocalPosition: {x: 57.29, y: 10.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 2.7865062}
   m_Children:
   - {fileID: 979229647}

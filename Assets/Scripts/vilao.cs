@@ -9,14 +9,17 @@ public class vilao : MonoBehaviour {
 	public float distancia;
 	public Transform Momochi;
 	public bool face = true;
+	Animator animator;
 
 	// Use this for initialization
 	void Start () {
-		
+		animator = gameObject.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		// Ver distancia
 		distancia = Vector2.Distance(this.transform.position, Momochi.transform.position);
 		// Flip
 		if ((Momochi.transform.position.x > this.transform.position.x) && !face)
@@ -28,7 +31,7 @@ public class vilao : MonoBehaviour {
 			Flip();
 		}
 		// Perseguir
-		if ((liberap == true) && distancia > 2.8f)
+		if ((liberap == true) && (distancia > 2.8f && distancia < 9.0f))
 		{
 			if(Momochi.transform.position.x < this.transform.position.x)
 			{
@@ -38,6 +41,32 @@ public class vilao : MonoBehaviour {
 			{
                 transform.Translate(new Vector2(vel * Time.deltaTime, 0));
 			}
+		}
+		// Animações
+		if (liberap == true) 
+		{
+			animator.SetBool ("voidmovendo", true);
+			animator.SetBool ("voidparado", false);
+		}
+		else
+		{
+			animator.SetBool ("voidmovendo", false);
+			animator.SetBool ("voidparado", true);
+		}
+		// Ataque Braço
+		if ((liberap == true) && distancia < 2.8f)
+		{
+			animator.SetBool ("voidatqbraco", true);
+		}
+		else 
+		{
+			animator.SetBool("voidatqbraco", false);
+		}
+		// Atirando
+		if ((liberap == true) && (distancia > 10.0f))
+		{
+			animator.SetBool ("voidparado", false);
+			animator.SetBool ("voidgiro", true);
 		}
 	}
 	void Flip()
@@ -52,4 +81,4 @@ public class vilao : MonoBehaviour {
 			liberap = true;
 		} 
 	}
-}
+	}
