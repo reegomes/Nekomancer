@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class personagem : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class personagem : MonoBehaviour
 	public bool Upmovement;
 	public Animator animator;
 	public GameObject Espada;
+    public Scrollbar vida, stamina;
+    public float vidaScroll, staminaScroll;
+    
 
     void Start()
     {
@@ -24,9 +28,24 @@ public class personagem : MonoBehaviour
 		animator = GetComponent<Animator>();
 		Upmovement = false;
 		Espada.SetActive(false);
+        vida.size = 1f;
+        stamina.size = 1f;
     }
     void Update()
-	{ 
+	{
+        if (vida.size == 1f)
+        {
+        
+        }
+        if (stamina.size < 1f)
+        {
+            stamina.size += 0.05f * Time.deltaTime;
+            
+        }
+        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.X))
+        {
+            stamina.size -= 0.20f;
+        }
 		//Puxa a animação do animator
 		if (Input.GetAxis ("Horizontal") != 0) 
 		{
@@ -87,4 +106,5 @@ public class personagem : MonoBehaviour
 	{
 
     }
+    
 }
