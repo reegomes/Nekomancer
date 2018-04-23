@@ -7,26 +7,22 @@ using UnityEngine.UI;
 public class personagem : MonoBehaviour
 {
     
-    public float velocidade = 0f; // Velocidade
+    private float velocidade = 5f; // Velocidade
     public bool noChao = false; // Variavel para ver se o personagem está no chao
     public Transform verificaChao; // var pra detectar a colisao
     float raiodochao = 0.2f; // determina o raio do alcance do collider
     public LayerMask plataforma; // marca o que é e o que não é plataforma
-    public float pulo; // força do pulo
+    float pulo = 250.0f; // força do pulo
     public bool giraSprite = true; // gira o sprite caso ele vire de um lado para o outro
-	public static int vidas = 7;
-	public bool Upmovement;
+	//public static int vidas = 7;
 	public Animator animator;
 	public GameObject Espada;
     public Scrollbar vida, stamina;
-    public float vidaScroll, staminaScroll;
-    
-
+    //public float vidaScroll, staminaScroll; Rapha, você ta usando isso? tinha 0 referencias e a gente gosta de trabalhar com referencias. ehauehua
     void Start()
     {
         //Inicia o animator
 		animator = GetComponent<Animator>();
-		Upmovement = false;
 		Espada.SetActive(false);
         vida.size = 1f;
         stamina.size = 1f;
@@ -101,10 +97,4 @@ public class personagem : MonoBehaviour
 		scale.x *= -1;
 		transform.localScale = scale;
 	}
-
-	public void Subir()
-	{
-
-    }
-    
 }
