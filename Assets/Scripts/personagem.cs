@@ -1,102 +1,100 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class personagem : MonoBehaviour
+public class Personagem : MonoBehaviour
 {
-    
-    private float velocidade = 5f; // Velocidade
-    public bool noChao = false; // Variavel para ver se o personagem está no chao
-    public Transform verificaChao; // var pra detectar a colisao
-    float raiodochao = 0.2f; // determina o raio do alcance do collider
-    public LayerMask plataforma; // marca o que é e o que não é plataforma
-    float pulo = 250.0f; // força do pulo
-    public bool giraSprite = true; // gira o sprite caso ele vire de um lado para o outro
-	//public static int vidas = 7;
-	public Animator animator;
-	public GameObject Espada;
-    public Scrollbar vida, stamina;
-    public bool ladoTiro = true;
-    //public float vidaScroll, staminaScroll; Rapha, você ta usando isso? tinha 0 referencias e a gente gosta de trabalhar com referencias. ehauehua
-    void Start()
-    {
-        //Inicia o animator
-		animator = GetComponent<Animator>();
-		Espada.SetActive(false);
-        vida.size = 1f;
-        stamina.size = 1f;
-    }
+    public Animator animatorPersonagem;
+    public SpriteRenderer srPersonagem;
+    public Rigidbody2D rbPersonagem;
+
+    public float velocidade;
+    public float forcaPulo;
+
+    public float movimentoHorizontal;
+    public float posicaoHorizontalAtual;
+    public float posicaoVerticalAtual;
+    public bool noChao;
+    public bool ladoTiro;
+   
     void Update()
 	{
-        if (vida.size == 1f)
-        {
-        
-        }
-        if (stamina.size < 1f)
-        {
-            stamina.size += 0.05f * Time.deltaTime;
-            
-        }
-        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.X))
-        {
-            stamina.size -= 0.20f;
-        }
-		//Puxa a animação do animator
-		if (Input.GetAxis ("Horizontal") != 0) 
-		{
-			animator.SetBool ("corrida", true);
-			animator.SetBool ("parado", false);
-		} 
-		else
-		{
-			animator.SetBool ("corrida", false);
-			animator.SetBool ("parado", true);
-		}
+        movimentoHorizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
 
-		float movimento = Input.GetAxis ("Horizontal");
-		GetComponent<Rigidbody2D> ().velocity = new Vector2 (movimento * velocidade, GetComponent<Rigidbody2D> ().velocity.y);
-		if (movimento > 0 && !giraSprite) 
-		{
-			Flip ();
-		} else if (movimento < 0 && giraSprite) 
-		{
-			Flip ();
-		}
-				
-		noChao = Physics2D.OverlapCircle (verificaChao.position, raiodochao, plataforma);
+       
+	}
 
-		if (noChao && Input.GetKeyDown(KeyCode.Space)) {
-			GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, pulo));
-            animator.SetBool("pulo", true);
-            //animator.SetBool("parado", false);
-		} else {
-			//animator.SetBool ("pulo", false);
-            //animator.SetBool("parado", true);
-		}
-
-        // Teste Espada
-        if (Input.GetKey(KeyCode.C))
+    void FixedUpdate()
+    {
+        if (movimentoHorizontal == 0)
         {
-            Espada.SetActive(true);
-            animator.SetBool("espada", true);
-            animator.SetBool("parado", false);
+            animatorPersonagem.SetBool("corrida", false);
         }
         else
         {
-            Espada.SetActive(false);
-            animator.SetBool("espada", false);
+            animatorPersonagem.SetBool("corrida", true);
+            if(movimentoHorizontal < 0)
+            {
+                srPersonagem.flipX = true;
+		ladoTiro = false;
+            }
+            else
+            {
+                srPersonagem.flipX = false;
+		ladoTiro = false;
+            }
+        }
+        if (!noChao)
+        {
+            animatorPersonagem.SetBool("pulo", true);
+            animatorPersonagem.SetBool("parado", false);
         }
 
+        if (Input.GetKeyDown(KeyCode.Space) && noChao == true)
+        {
+            rbPersonagem.velocity = new Vector2(0, 1) * forcaPulo * Time.deltaTime;
+            
+        }
 
-	}
-    void Flip()
-	{
-		giraSprite = !giraSprite;
-		Vector3 scale = transform.localScale;
-		scale.x *= -1;
-		transform.localScale = scale;
-        ladoTiro = false;
-	}
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            animatorPersonagem.SetBool("espada",true);
+            Invoke("Teste", 0.5f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            animatorPersonagem.SetBool("tiro", true);
+            Invoke("Teste", 0.5f);
+        }
+
+        posicaoHorizontalAtual = transform.position.x + (movimentoHorizontal * velocidade) * Time.deltaTime;
+
+        transform.position = new Vector2(posicaoHorizontalAtual, transform.position.y);
+    }
+
+    private void OnCollisionStay2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "plataformas")
+        {
+            noChao = true;
+            animatorPersonagem.SetBool("pulo", false);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "plataformas")
+        {
+            noChao = false;
+        }
+    }
+
+    void Teste()
+    {
+        animatorPersonagem.SetBool("parado", true);
+        animatorPersonagem.SetBool("espada", false);
+        animatorPersonagem.SetBool("tiro", false);
+    }
 }
