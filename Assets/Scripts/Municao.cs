@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Municao : MonoBehaviour {
-	public float vel = 2.5f;
+public class Municao : personagem {
+	float vel = 2.5f;
+    float veln = -2.5f;
     public GameObject municao;
 	// Use this for initialization
 	void Start () {
@@ -12,8 +13,15 @@ public class Municao : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(new Vector2(vel * Time.deltaTime, 0));
-	}
+        if(ladoTiro == false)
+        {
+            transform.Translate(new Vector2(veln, 0));
+        }
+        else
+        {
+            transform.Translate(new Vector2(vel * Time.deltaTime, 0));
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D outros)
     {

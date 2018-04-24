@@ -18,6 +18,7 @@ public class personagem : MonoBehaviour
 	public Animator animator;
 	public GameObject Espada;
     public Scrollbar vida, stamina;
+    public bool ladoTiro = true;
     //public float vidaScroll, staminaScroll; Rapha, você ta usando isso? tinha 0 referencias e a gente gosta de trabalhar com referencias. ehauehua
     void Start()
     {
@@ -96,5 +97,6 @@ public class personagem : MonoBehaviour
 		Vector3 scale = transform.localScale;
 		scale.x *= -1;
 		transform.localScale = scale;
+        ladoTiro = false;
 	}
 }
