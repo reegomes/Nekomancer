@@ -19,6 +19,7 @@ public class personagem : MonoBehaviour
 	public GameObject Espada;
     public Scrollbar vida, stamina;
     //public float vidaScroll, staminaScroll; Rapha, você ta usando isso? tinha 0 referencias e a gente gosta de trabalhar com referencias. ehauehua
+    //teste ao vivo
     void Start()
     {
         //Inicia o animator
