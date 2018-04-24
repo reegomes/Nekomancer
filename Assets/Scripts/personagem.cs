@@ -37,7 +37,7 @@ public class Personagem : MonoBehaviour
             if(movimentoHorizontal < 0)
             {
                 srPersonagem.flipX = true;
-		ladoTiro = false;
+		ladoTiro = true;
             }
             else
             {
