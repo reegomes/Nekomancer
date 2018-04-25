@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Personagem : MonoBehaviour
+public class personagem : MonoBehaviour
 {
     public Animator animatorPersonagem;
     public SpriteRenderer srPersonagem;
@@ -16,7 +16,8 @@ public class Personagem : MonoBehaviour
     public float posicaoHorizontalAtual;
     public float posicaoVerticalAtual;
     public bool noChao;
-   
+	public int puloDuplo = 2;
+
     void Update()
 	{
         movimentoHorizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
@@ -46,12 +47,12 @@ public class Personagem : MonoBehaviour
         {
             animatorPersonagem.SetBool("pulo", true);
             animatorPersonagem.SetBool("parado", false);
-        }
+		}
 
-        if (Input.GetKeyDown(KeyCode.Space) && noChao == true)
+		if (Input.GetKeyDown(KeyCode.Space) && puloDuplo > 0)
         {
             rbPersonagem.velocity = new Vector2(0, 1) * forcaPulo * Time.deltaTime;
-            
+			puloDuplo--;
         }
 
         if (Input.GetKeyDown(KeyCode.X))
@@ -77,7 +78,7 @@ public class Personagem : MonoBehaviour
         {
             noChao = true;
             animatorPersonagem.SetBool("pulo", false);
-        }
+		}
     }
 
     private void OnCollisionExit2D(Collision2D col)
@@ -87,6 +88,13 @@ public class Personagem : MonoBehaviour
             noChao = false;
         }
     }
+	private void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "plataformas")
+		{
+			puloDuplo = 2;
+		}
+	}
 
     void Teste()
     {

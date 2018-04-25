@@ -4123,6 +4123,7 @@ MonoBehaviour:
   posicaoHorizontalAtual: 0
   posicaoVerticalAtual: 0
   noChao: 0
+  puloDuplo: 2
 --- !u!95 &1666704933
 Animator:
   serializedVersion: 3

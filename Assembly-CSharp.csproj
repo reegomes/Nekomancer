@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Animacoes.cs" />
-     <Compile Include="Assets\Scripts\Arma.cs" />
      <Compile Include="Assets\Scripts\Ativador.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
      <Compile Include="Assets\Scripts\ColisaoCaixas.cs" />
@@ -64,8 +63,6 @@
      <Compile Include="Assets\Scripts\ParaEscada.cs" />
      <Compile Include="Assets\Scripts\PerdeVidas.cs" />
      <Compile Include="Assets\Scripts\personagem.cs" />
-     <Compile Include="Assets\Scripts\TestePulo.cs" />
-     <Compile Include="Assets\Scripts\Tiros.cs" />
      <Compile Include="Assets\Scripts\vilao.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>C:/Users/renato.gsouza1/Documents/GitHub/nkm/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
