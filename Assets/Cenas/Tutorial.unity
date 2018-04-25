@@ -1166,14 +1166,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7530d19992764e846b5e9e446f1e1d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorPersonagem: {fileID: 1666704933}
+  srPersonagem: {fileID: 1666704927}
+  rbPersonagem: {fileID: 1666704930}
+  velocidade: 0
+  forcaPulo: 0
+  movimentoHorizontal: 0
+  posicaoHorizontalAtual: 0
+  posicaoVerticalAtual: 0
   noChao: 0
-  verificaChao: {fileID: 979229647}
-  plataforma:
-    serializedVersion: 2
-    m_Bits: 256
-  giraSprite: 1
-  animator: {fileID: 1666704933}
-  Espada: {fileID: 1588796566}
+  ladoTiro: 0
   vida: {fileID: 1859871164}
   stamina: {fileID: 997827276}
   posicaoInicial: {x: -7.71, y: -3.35, z: 0}
@@ -4372,14 +4374,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f63b6ca3dc0abd4d86e76a1773f5560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animatorPersonagem: {fileID: 1666704933}
+  srPersonagem: {fileID: 1666704927}
+  rbPersonagem: {fileID: 1666704930}
+  velocidade: 400
+  forcaPulo: 350
+  movimentoHorizontal: 0
+  posicaoHorizontalAtual: 0
+  posicaoVerticalAtual: 0
   noChao: 0
-  verificaChao: {fileID: 979229647}
-  plataforma:
-    serializedVersion: 2
-    m_Bits: 256
-  giraSprite: 1
-  animator: {fileID: 1666704933}
-  Espada: {fileID: 1588796566}
+  ladoTiro: 0
   vida: {fileID: 1859871164}
   stamina: {fileID: 997827276}
 --- !u!114 &1666704932

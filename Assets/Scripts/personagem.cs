@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Personagem : MonoBehaviour
 {
@@ -17,11 +18,31 @@ public class Personagem : MonoBehaviour
     public float posicaoVerticalAtual;
     public bool noChao;
     public bool ladoTiro;
+
+    public Scrollbar vida, stamina;
    
+    void Start() 
+    {
+        vida.size = 1f;
+        stamina.size = 1f;
+    }
     void Update()
 	{
         movimentoHorizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
-
+    
+    if (vida.size == 1f)
+        {
+        
+        }
+        if (stamina.size < 1f)
+        {
+            stamina.size += 0.05f * Time.deltaTime;
+            
+        }
+        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.X))
+        {
+            stamina.size -= 0.20f;
+        }
        
 	}
 
@@ -37,12 +58,12 @@ public class Personagem : MonoBehaviour
             if(movimentoHorizontal < 0)
             {
                 srPersonagem.flipX = true;
-		ladoTiro = true;
+		        ladoTiro = true;
             }
             else
             {
                 srPersonagem.flipX = false;
-		ladoTiro = false;
+		        ladoTiro = false;
             }
         }
         if (!noChao)

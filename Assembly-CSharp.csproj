@@ -64,7 +64,7 @@
      <Compile Include="Assets\Scripts\Municao.cs" />
      <Compile Include="Assets\Scripts\ParaEscada.cs" />
      <Compile Include="Assets\Scripts\PerdeVidas.cs" />
-     <Compile Include="Assets\Scripts\personagem.cs" />
+     <Compile Include="Assets\Scripts\Personagem.cs" />
      <Compile Include="Assets\Scripts\TestePulo.cs" />
      <Compile Include="Assets\Scripts\Tiros.cs" />
      <Compile Include="Assets\Scripts\vilao.cs" />

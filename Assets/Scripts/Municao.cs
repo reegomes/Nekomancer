@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Municao : personagem {
+public class Municao : Personagem {
 	float vel = 2.5f;
     float veln = -2.5f;
     public GameObject municao;

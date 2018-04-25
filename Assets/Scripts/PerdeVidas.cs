@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
- public class PerdeVidas : personagem {
+ public class PerdeVidas : Personagem {
 
 	public Vector3 posicaoInicial;
     // Use this for initialization
