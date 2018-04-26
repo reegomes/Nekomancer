@@ -27,7 +27,7 @@ TagManager:
   - fundodatela
   - tiro
   - Momochi
-  - 
+  - fundo
   - 
   - 
   - 
@@ -46,11 +46,20 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
+  - name: fundodatela
+    uniqueID: 3913494993
+    locked: 0
+  - name: blocodefundo
+    uniqueID: 4290981397
     locked: 0
   - name: plataformas
     uniqueID: 2109168503
+    locked: 0
+  - name: pixes
+    uniqueID: 2799440605
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: caixas
     uniqueID: 1718005451
@@ -61,12 +70,9 @@ TagManager:
   - name: ativador
     uniqueID: 2089510657
     locked: 0
-  - name: fundodatela
-    uniqueID: 3913494993
-    locked: 0
   - name: tiro
     uniqueID: 2969567533
     locked: 0
-  - name: New Layer
-    uniqueID: 2799440605
+  - name: correntes
+    uniqueID: 1414666975
     locked: 0
