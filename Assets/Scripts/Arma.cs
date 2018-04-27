@@ -17,6 +17,7 @@ public class Arma : MonoBehaviour {
 	
 	void Update(){
 		//distancia = Vector2.Distance(arma.transform.position, projetil.transform.position);
+
 	}
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -24,7 +25,6 @@ public class Arma : MonoBehaviour {
 			animator.SetBool ("tiro", true);
 			animator.SetBool ("parado", false);
 			Instantiate (municao, new Vector3 (arma.transform.position.x, arma.transform.position.y, arma.transform.position.z), arma.transform.rotation);
-			Debug.Log("Teste, tiro instanciado");
 		} 
 		else 
 		{

@@ -23,14 +23,13 @@ public class ArmadilhaCode3 : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             liberaArmadilha = true;
-            Debug.Log("Colidiu");
         }
     }
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("plataformas"))
         {
-            Destroy(this.gameObject, 5.0f);
+            //Destroy(this.gameObject, 5.0f);
         }
     }
 }
