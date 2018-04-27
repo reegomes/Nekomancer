@@ -16,7 +16,7 @@ public class Arma : MonoBehaviour {
 	}
 	
 	void Update(){
-		distancia = Vector2.Distance(arma.transform.position, projetil.transform.position);
+		//distancia = Vector2.Distance(arma.transform.position, projetil.transform.position);
 	}
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -33,7 +33,8 @@ public class Arma : MonoBehaviour {
 
 		if (distancia >= 1.5f)
 		{
-			Destroy(municao.gameObject);
+
+            //Destroy(municao.gameObject);
 		}
 	}
 }

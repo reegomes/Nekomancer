@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PerdeVidas : MonoBehaviour {
 
 	public Vector3 posicaoInicial;
-    public static int vidas = 6;
+    public static int vidas = 7;
     // Use this for initialization
 
     void OnCollisionEnter2D(Collision2D fimdatela)

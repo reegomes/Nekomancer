@@ -74,7 +74,7 @@ public class personagem : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.tag == "plataformas")
+        if (col.gameObject.tag == "plataformas" || col.gameObject.tag == "caixas")
         {
             noChao = true;
             animatorPersonagem.SetBool("pulo", false);
@@ -90,7 +90,7 @@ public class personagem : MonoBehaviour
     }
 	private void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "plataformas")
+		if (col.gameObject.tag == "plataformas" || col.gameObject.tag == "caixas")
 		{
 			puloDuplo = 2;
 		}
