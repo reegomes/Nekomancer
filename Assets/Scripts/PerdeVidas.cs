@@ -7,8 +7,6 @@ public class PerdeVidas : MonoBehaviour {
 
 	public Vector3 posicaoInicial;
     public static int vidas = 7;
-    // Use this for initialization
-
     void OnCollisionEnter2D(Collision2D fimdatela)
     {
         PerdeVidas.vidas--;
@@ -22,14 +20,6 @@ public class PerdeVidas : MonoBehaviour {
             Debug.Log("Perdeu uma vida, volta pra tela" + vidas);
             fimdatela.transform.position = posicaoInicial;
         }
-	}
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
 
