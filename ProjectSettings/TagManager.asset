@@ -12,6 +12,8 @@ TagManager:
   - escada
   - plataforma
   - paraescada
+  - buracomorte
+  - buracovolta
   layers:
   - Default
   - TransparentFX
@@ -72,6 +74,9 @@ TagManager:
     locked: 0
   - name: tiro
     uniqueID: 2969567533
+    locked: 0
+  - name: Player
+    uniqueID: 3879765491
     locked: 0
   - name: correntes
     uniqueID: 1414666975
