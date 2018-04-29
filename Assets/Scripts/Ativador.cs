@@ -24,7 +24,4 @@ public class Ativador : MonoBehaviour {
                 rodaTim = true;
         }
     }
-    void rodaTimao(){
-
-    }
 }

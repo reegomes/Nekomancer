@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArmadilhaCode1 : MonoBehaviour
+public class ArmadilhaCode1 : CheckPoint
 {
     public bool liberaArmadilha;
     public GameObject armadilha;
@@ -11,6 +11,7 @@ public class ArmadilhaCode1 : MonoBehaviour
         liberaArmadilha = false;
     }
     void Update()
+
     {
         if (liberaArmadilha == true)
         {
@@ -29,7 +30,14 @@ public class ArmadilhaCode1 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("plataformas"))
         {
-            //Destroy(this.gameObject, 5.0f);
+            Destroy(this.gameObject, 1.0f);
         }
     }
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag("Player"))
+		{
+			other.transform.position = checkpoint1.transform.position;
+		}
+	}
 }
