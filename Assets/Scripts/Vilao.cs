@@ -81,4 +81,4 @@ public class vilao : MonoBehaviour {
 			liberap = true;
 		} 
 	}
-}
+	}
