@@ -14,6 +14,7 @@ TagManager:
   - paraescada
   - buracomorte
   - buracovolta
+  - sobearmadilha
   layers:
   - Default
   - TransparentFX
