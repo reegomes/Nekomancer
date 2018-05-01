@@ -14,6 +14,5 @@ public class Gerenciamento : MonoBehaviour {
         zRotation++;
         roda.transform.eulerAngles = new Vector3(0, 0, zRotation);
         roda2.transform.eulerAngles = new Vector3(0, 0, -zRotation);
-		//momochi.transform.position = checkpoint;
     }
 }
