@@ -7,7 +7,7 @@ public class ColisaoCaixas : MonoBehaviour
 
 {
     //public float velocidade = 0f;
-
+    /*
     void OnCollisionEnter2D(Collision2D caixasacao)
     {
         if (caixasacao.gameObject.CompareTag("ativador"))
@@ -23,4 +23,14 @@ public class ColisaoCaixas : MonoBehaviour
             Destroy(caixasacao.gameObject);
         }
     }
+    
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("caixas"))
+        {
+            Debug.Log("Colisão ok, falta ação das plataformas");
+            // abaixarPlataforma == true;
+        }
+    }
+    */
 }

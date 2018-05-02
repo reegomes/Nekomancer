@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Ativador : MonoBehaviour {
 
-    public bool desceJao, rodaTim;
+    public bool desceJao, rodaTim, sobeJao;
     public float zRotation = 1.0f;
     public GameObject timaoAtivador2;
 	// Use this for initialization
 	void Start () {
         desceJao = false;
         rodaTim = false;
+        sobeJao = false;
 	}
 	
 	// Update is called once per frame
@@ -22,6 +23,13 @@ public class Ativador : MonoBehaviour {
                 desceJao = true;
                 Debug.Log("Colisão OK");
                 rodaTim = true;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("CaixaAtivadora")){
+            sobeJao = true;
+            Debug.Log("SobeJãoDeveriaIniciar");
         }
     }
 }
