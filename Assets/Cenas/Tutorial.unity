@@ -5997,6 +5997,7 @@ MonoBehaviour:
   rodaTim: 0
   zRotation: 1
   timaoAtivador2: {fileID: 1209489207}
+  teste: {fileID: 1209489210}
 --- !u!61 &629873009
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11625,8 +11626,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1209489207}
   m_LocalRotation: {x: -0, y: -0, z: 0.712026, w: 0.70215315}
-  m_LocalPosition: {x: 193.996, y: -18.15, z: 0.29077783}
-  m_LocalScale: {x: 1.5180314, y: 1.5180321, z: 1.5180309}
+  m_LocalPosition: {x: 193.99, y: -17.71, z: 0.29077783}
+  m_LocalScale: {x: 1.8732502, y: 1.5180321, z: 1.5180309}
   m_Children: []
   m_Father: {fileID: 1425729794}
   m_RootOrder: 15
@@ -11645,10 +11646,10 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.0000036215097, y: 0.000074950425}
-  m_ConnectedAnchor: {x: 16.720901, y: 1.2100048}
+  m_ConnectedAnchor: {x: 16.714905, y: 1.6500068}
   m_UseMotor: 1
   m_Motor:
-    m_MotorSpeed: 15
+    m_MotorSpeed: -15
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
@@ -11661,7 +11662,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1209489207}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -13885,7 +13886,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1472742450}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 223.462, y: -19.69, z: 0.29077783}
+  m_LocalPosition: {x: 222.113, y: -19.69, z: 0.29077783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 289793179}
@@ -13903,18 +13904,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.017501831, y: 0.027885914}
+  m_Offset: {x: -0.542572, y: 0.027885914}
   m_SpriteTilingProperty:
     border: {x: 0.66999996, y: 0.58, z: 0.7, w: 0.56}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 5.69, y: 4.18}
-    newSize: {x: 41.327244, y: 4.229416}
+    newSize: {x: 44.025192, y: 4.229416}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40.378387, y: 3.5076914}
+  m_Size: {x: 41.428528, y: 3.5076914}
   m_EdgeRadius: 0
 --- !u!212 &1472742453
 SpriteRenderer:
@@ -13955,7 +13956,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 41.327244, y: 4.229416}
+  m_Size: {x: 44.025192, y: 4.229416}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

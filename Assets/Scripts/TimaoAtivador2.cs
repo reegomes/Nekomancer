@@ -3,17 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TimaoAtivador2 : Ativador {
-	void Update () {
+
+    public HingeJoint2D teste;
+    
+
+    void Update () {
         
-        if(desceJao == true)
+
+        if (desceJao == true)
         {
-            zRotation += 50 * Time.deltaTime;
-            timaoAtivador2.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            transform.eulerAngles = new Vector3(0, 0, zRotation);
+            if (teste.useMotor == false)
+            {
+                zRotation += 50 * Time.deltaTime;
+                teste.useMotor = true;
+                transform.eulerAngles = new Vector3(0, 0, zRotation);
+
+            }
+            else if (teste.useMotor == true)
+            {
+                zRotation += 50 * Time.deltaTime;
+                teste.useMotor = false;
+                transform.eulerAngles = new Vector3(0, 0, zRotation);
+            }
+
         }
         if (zRotation >= 50.0f)
         {
             desceJao = false;
+            
         }
     }
 

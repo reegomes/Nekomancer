@@ -18,10 +18,22 @@ public class Ativador : MonoBehaviour {
     
     }
     private void OnTriggerStay2D(Collider2D other) {
-            if(other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.E)){
+
+
+        if (other.gameObject.CompareTag("Player") && Input.GetKey(KeyCode.E))
+        {
+            if (desceJao == false)
+            {
                 desceJao = true;
                 Debug.Log("Colisão OK");
                 rodaTim = true;
+            }
+            else if (desceJao == true)
+            {
+                desceJao = false;
+                rodaTim = false;
+            }
+                
         }
     }
 }
