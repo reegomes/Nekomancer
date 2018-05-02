@@ -12,41 +12,47 @@ public class personagem : MonoBehaviour
     public float velocidade;
     public float forcaPulo;
 
-    public float movimentoHorizontal;
-    public float posicaoHorizontalAtual;
-    public float posicaoVerticalAtual;
+    float movimentoHorizontal;
+    float posicaoHorizontalAtual;
+    float posicaoVerticalAtual;
     public bool noChao;
 	public int puloDuplo = 2;
+    public bool LadoTiro;
 
+    void Start() {
+        LadoTiro = true;
+    }
     void Update()
 	{
         movimentoHorizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
-
-       
 	}
 
     void FixedUpdate()
     {
         if (movimentoHorizontal == 0)
         {
-            animatorPersonagem.SetBool("corrida", false);
+            //animatorPersonagem.SetBool("corrida", false);
         }
         else
         {
-            animatorPersonagem.SetBool("corrida", true);
+            //animatorPersonagem.SetBool("corrida", true);
             if(movimentoHorizontal < 0)
             {
                 srPersonagem.flipX = true;
+                //LadoTiro = false;
+                //LadoT();
             }
             else
             {
                 srPersonagem.flipX = false;
+                //LadoTiro = true;
+                //LadoT();
             }
         }
         if (!noChao)
         {
-            animatorPersonagem.SetBool("pulo", true);
-            animatorPersonagem.SetBool("parado", false);
+            //animatorPersonagem.SetBool("pulo", true);
+            //animatorPersonagem.SetBool("parado", false);
 		}
 
 		if (Input.GetKeyDown(KeyCode.Space) && puloDuplo > 0)
@@ -57,13 +63,13 @@ public class personagem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            animatorPersonagem.SetBool("espada",true);
+            //animatorPersonagem.SetBool("espada",true);
             Invoke("Teste", 0.5f);
         }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            animatorPersonagem.SetBool("tiro", true);
+            //animatorPersonagem.SetBool("tiro", true);
             Invoke("Teste", 0.5f);
         }
 
@@ -77,7 +83,7 @@ public class personagem : MonoBehaviour
         if (col.gameObject.tag == "plataformas" || col.gameObject.tag == "caixas")
         {
             noChao = true;
-            animatorPersonagem.SetBool("pulo", false);
+            //animatorPersonagem.SetBool("pulo", false);
 		}
     }
 
@@ -98,8 +104,12 @@ public class personagem : MonoBehaviour
 
     void Teste()
     {
-        animatorPersonagem.SetBool("parado", true);
-        animatorPersonagem.SetBool("espada", false);
-        animatorPersonagem.SetBool("tiro", false);
+        //animatorPersonagem.SetBool("parado", true);
+        //animatorPersonagem.SetBool("espada", false);
+        //animatorPersonagem.SetBool("tiro", false);
+    }
+
+    void LadoT(){
+        LadoTiro = !LadoTiro;
     }
 }
