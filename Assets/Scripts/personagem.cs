@@ -33,14 +33,14 @@ public class personagem : MonoBehaviour
 
     if (Input.GetKeyDown(KeyCode.C) && LadoTiro == true)
     {
-        //animator.SetBool ("tiro", true);
-        //animator.SetBool ("parado", false);
+        animatorPersonagem.SetBool("tiro", true);
+        Invoke("Teste", 0.5f);
         Instantiate(municao, new Vector3(arma.transform.position.x, arma.transform.position.y, arma.transform.position.z), arma.transform.rotation);
     }
     else if (Input.GetKeyDown(KeyCode.C) && LadoTiro == false)
     {
-        //animator.SetBool ("tiro", true);
-        //animator.SetBool ("parado", false);
+        animatorPersonagem.SetBool("tiro", true);
+        Invoke("Teste", 0.5f);
         Instantiate(municao2, new Vector3(arma2.transform.position.x, arma2.transform.position.y, arma2.transform.position.z), arma2.transform.rotation);
     }
     else
@@ -89,11 +89,16 @@ public class personagem : MonoBehaviour
             Invoke("Teste", 0.5f);
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
+        /*if (Input.GetKeyDown(KeyCode.C))
         {
             animatorPersonagem.SetBool("tiro", true);
             Invoke("Teste", 0.5f);
 
+        }*/
+          if(Input.GetKeyDown(KeyCode.E))
+        {
+            animatorPersonagem.SetBool ("ativador",true);
+            Invoke("Teste",0.5f);
         }
 
         posicaoHorizontalAtual = transform.position.x + (movimentoHorizontal * velocidade) * Time.deltaTime;
@@ -130,5 +135,6 @@ public class personagem : MonoBehaviour
         animatorPersonagem.SetBool("parado", true);
         animatorPersonagem.SetBool("espada", false);
         animatorPersonagem.SetBool("tiro", false);
+        animatorPersonagem.SetBool("ativador",false);
     }
 }

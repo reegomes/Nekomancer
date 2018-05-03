@@ -19254,11 +19254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82dbc63f05997b41ac762b7d0eeca3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 1
-  liberap: 0
-  distancia: 0
-  Momochi: {fileID: 1666704928}
-  face: 1
 --- !u!1 &1648402645
 GameObject:
   m_ObjectHideFlags: 0
