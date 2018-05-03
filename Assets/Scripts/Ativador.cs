@@ -33,15 +33,7 @@ public class Ativador : MonoBehaviour {
             {
                 desceJao = false;
                 rodaTim = false;
-            }
-                
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("CaixaAtivadora")){
-            sobeJao = true;
-            Debug.Log("SobeJãoDeveriaIniciar");
+            } 
         }
     }
 }

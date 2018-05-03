@@ -15,6 +15,7 @@ TagManager:
   - buracomorte
   - buracovolta
   - sobearmadilha
+  - void
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class vilao : MonoBehaviour {
+public class Vilao : MonoBehaviour {
 
 	public float vel = 1.0f;
 	public bool liberap = false;
@@ -31,7 +31,7 @@ public class vilao : MonoBehaviour {
 			Flip();
 		}
 		// Perseguir
-		if ((liberap == true) && (distancia > 2.8f && distancia < 9.0f))
+		if ((liberap == true) && (distancia > 12.8f && distancia < 19.0f))
 		{
 			if(Momochi.transform.position.x < this.transform.position.x)
 			{

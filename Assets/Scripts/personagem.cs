@@ -19,40 +19,62 @@ public class personagem : MonoBehaviour
 	public int puloDuplo = 2;
     public bool LadoTiro;
 
+    public GameObject municao, municao2, arma, arma2;
+
+
     void Start() {
         LadoTiro = true;
     }
     void Update()
 	{
         movimentoHorizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
-	}
+
+    // Tiros
+
+    if (Input.GetKeyDown(KeyCode.C) && LadoTiro == true)
+    {
+        //animator.SetBool ("tiro", true);
+        //animator.SetBool ("parado", false);
+        Instantiate(municao, new Vector3(arma.transform.position.x, arma.transform.position.y, arma.transform.position.z), arma.transform.rotation);
+    }
+    else if (Input.GetKeyDown(KeyCode.C) && LadoTiro == false)
+    {
+        //animator.SetBool ("tiro", true);
+        //animator.SetBool ("parado", false);
+        Instantiate(municao2, new Vector3(arma2.transform.position.x, arma2.transform.position.y, arma2.transform.position.z), arma2.transform.rotation);
+    }
+    else
+    {
+       //animator.SetBool("tiro", false);
+    }
+}
 
     void FixedUpdate()
     {
         if (movimentoHorizontal == 0)
         {
-            //animatorPersonagem.SetBool("corrida", false);
+            animatorPersonagem.SetBool("corrida", false);
         }
         else
         {
-            //animatorPersonagem.SetBool("corrida", true);
+            animatorPersonagem.SetBool("corrida", true);
             if(movimentoHorizontal < 0)
             {
                 srPersonagem.flipX = true;
-                //LadoTiro = false;
+                LadoTiro = false;
                 //LadoT();
             }
             else
             {
                 srPersonagem.flipX = false;
-                //LadoTiro = true;
+                LadoTiro = true;
                 //LadoT();
             }
         }
         if (!noChao)
         {
-            //animatorPersonagem.SetBool("pulo", true);
-            //animatorPersonagem.SetBool("parado", false);
+            animatorPersonagem.SetBool("pulo", true);
+            animatorPersonagem.SetBool("parado", false);
 		}
 
 		if (Input.GetKeyDown(KeyCode.Space) && puloDuplo > 0)
@@ -63,14 +85,15 @@ public class personagem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            //animatorPersonagem.SetBool("espada",true);
+            animatorPersonagem.SetBool("espada",true);
             Invoke("Teste", 0.5f);
         }
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            //animatorPersonagem.SetBool("tiro", true);
+            animatorPersonagem.SetBool("tiro", true);
             Invoke("Teste", 0.5f);
+
         }
 
         posicaoHorizontalAtual = transform.position.x + (movimentoHorizontal * velocidade) * Time.deltaTime;
@@ -83,7 +106,7 @@ public class personagem : MonoBehaviour
         if (col.gameObject.tag == "plataformas" || col.gameObject.tag == "caixas")
         {
             noChao = true;
-            //animatorPersonagem.SetBool("pulo", false);
+            animatorPersonagem.SetBool("pulo", false);  
 		}
     }
 
@@ -104,12 +127,8 @@ public class personagem : MonoBehaviour
 
     void Teste()
     {
-        //animatorPersonagem.SetBool("parado", true);
-        //animatorPersonagem.SetBool("espada", false);
-        //animatorPersonagem.SetBool("tiro", false);
-    }
-
-    void LadoT(){
-        LadoTiro = !LadoTiro;
+        animatorPersonagem.SetBool("parado", true);
+        animatorPersonagem.SetBool("espada", false);
+        animatorPersonagem.SetBool("tiro", false);
     }
 }

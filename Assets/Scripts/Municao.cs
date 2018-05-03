@@ -9,6 +9,12 @@ public class Municao : MonoBehaviour {
         transform.Translate(new Vector2(vel * Time.deltaTime, 0));
 	}
 
+    void Start()
+    {
+        Invoke("Destruindo", 2.5f);    
+    }
+
+
     void OnCollisionEnter2D(Collision2D outros)
     {
         if (outros.gameObject.CompareTag("caixas"))
@@ -16,5 +22,15 @@ public class Municao : MonoBehaviour {
             Destroy(outros.gameObject);
             Destroy(municao.gameObject);
         }
+        else if (outros.gameObject.CompareTag("plataformas"))
+        {
+            Destroy(municao.gameObject);
+        }
     }
+
+    void Destruindo()
+    {
+        Destroy(this.gameObject);
+    }
+
 }
