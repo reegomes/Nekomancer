@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Arma : personagem {
-
+    /*
 	//public GameObject municao, municao2;
 	public GameObject arma;
 	public Animator animator;
@@ -40,5 +40,5 @@ public class Arma : personagem {
         {
             //Destroy(municao.gameObject);
         }
-    }
+    } */
 }

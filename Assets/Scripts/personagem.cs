@@ -33,14 +33,10 @@ public class personagem : MonoBehaviour
 
     if (Input.GetKeyDown(KeyCode.C) && LadoTiro == true)
     {
-        //animator.SetBool ("tiro", true);
-        //animator.SetBool ("parado", false);
         Instantiate(municao, new Vector3(arma.transform.position.x, arma.transform.position.y, arma.transform.position.z), arma.transform.rotation);
     }
     else if (Input.GetKeyDown(KeyCode.C) && LadoTiro == false)
     {
-        //animator.SetBool ("tiro", true);
-        //animator.SetBool ("parado", false);
         Instantiate(municao2, new Vector3(arma2.transform.position.x, arma2.transform.position.y, arma2.transform.position.z), arma2.transform.rotation);
     }
     else

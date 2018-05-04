@@ -16,6 +16,7 @@ TagManager:
   - buracovolta
   - sobearmadilha
   - void
+  - audiochange
   layers:
   - Default
   - TransparentFX

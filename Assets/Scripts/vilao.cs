@@ -10,6 +10,9 @@ public class Vilao : MonoBehaviour {
 	public Transform Momochi;
 	public bool face = true;
 	Animator animator;
+    public AudioSource amaterasu;
+    public AudioClip amate;
+    public GameObject tiroInimigo;
 
 	// Use this for initialization
 	void Start () {
@@ -41,12 +44,15 @@ public class Vilao : MonoBehaviour {
 			{
                 transform.Translate(new Vector2(vel * Time.deltaTime, 0));
 			}
+            GameObject tiro = (GameObject)Instantiate(tiroInimigo);
+            tiro.transform.position = new Vector2(transform.position.x -5, Random.Range(transform.position.y +5,transform.position.y - 6));
 		}
 		// Animações
 		if (liberap == true) 
 		{
 			animator.SetBool ("voidmovendo", true);
 			animator.SetBool ("voidparado", false);
+            amaterasu.Play();
 		}
 		else
 		{

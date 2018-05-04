@@ -330,6 +330,7 @@
     <Compile Include="Assets\Scripts\ArmadilhaCode2.cs" />
     <Compile Include="Assets\Scripts\ArmadilhaCode3.cs" />
     <Compile Include="Assets\Scripts\Ativador.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CameraScript.cs" />
     <Compile Include="Assets\Scripts\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\CirculoEntra.cs" />
@@ -346,6 +347,7 @@
     <Compile Include="Assets\Scripts\PerdeVidas.cs" />
     <Compile Include="Assets\Scripts\personagem.cs" />
     <Compile Include="Assets\Scripts\TimaoAtivador2.cs" />
+    <Compile Include="Assets\Scripts\TiroInimigo.cs" />
     <Compile Include="Assets\Scripts\Vilao.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
