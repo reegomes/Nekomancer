@@ -17,6 +17,7 @@ TagManager:
   - sobearmadilha
   - void
   - audiochange
+  - voidTiro
   layers:
   - Default
   - TransparentFX

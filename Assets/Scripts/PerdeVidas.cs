@@ -7,7 +7,8 @@ public class PerdeVidas : MonoBehaviour {
 
 	public Vector3 posicaoInicial;
     public static int vidas = 7;
-    void OnCollisionEnter2D(Collision2D fimdatela)
+
+    private void OnTriggerEnter2D(Collider2D fimdatela)
     {
         PerdeVidas.vidas--;
         if (fimdatela.gameObject.CompareTag("fundodatela") && PerdeVidas.vidas == 0)
@@ -20,6 +21,6 @@ public class PerdeVidas : MonoBehaviour {
             Debug.Log("Perdeu uma vida, volta pra tela" + vidas);
             fimdatela.transform.position = posicaoInicial;
         }
-	}
+    }
 }
 

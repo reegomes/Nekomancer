@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class personagem : MonoBehaviour
 {
     public Animator animatorPersonagem;
     public SpriteRenderer srPersonagem;
     public Rigidbody2D rbPersonagem;
+    public Scrollbar life;
 
     public float velocidade;
     public float forcaPulo;
@@ -43,6 +45,12 @@ public class personagem : MonoBehaviour
     {
        //animator.SetBool("tiro", false);
     }
+
+        if (life.size <= 0f)
+        {
+            animatorPersonagem.SetBool("morte", true);
+            Invoke("Death", 1f);
+        }
 }
 
     void FixedUpdate()
@@ -92,6 +100,14 @@ public class personagem : MonoBehaviour
 
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            animatorPersonagem.SetBool("ativador", true);
+            Invoke("Teste", 0.5f);
+        }
+
+
+
         posicaoHorizontalAtual = transform.position.x + (movimentoHorizontal * velocidade) * Time.deltaTime;
 
         transform.position = new Vector2(posicaoHorizontalAtual, transform.position.y);
@@ -120,11 +136,24 @@ public class personagem : MonoBehaviour
 			puloDuplo = 2;
 		}
 	}
-
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "voidTiro")
+        {
+            life.size -= 0.2f;
+        }
+    }
     void Teste()
     {
         animatorPersonagem.SetBool("parado", true);
         animatorPersonagem.SetBool("espada", false);
         animatorPersonagem.SetBool("tiro", false);
+        animatorPersonagem.SetBool("ativador", false);
+        animatorPersonagem.SetBool("morte", false);
+    }
+
+    void Death()
+    {
+        Destroy(gameObject);
     }
 }

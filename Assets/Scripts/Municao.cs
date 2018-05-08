@@ -22,10 +22,11 @@ public class Municao : MonoBehaviour {
             Destroy(outros.gameObject);
             Destroy(municao.gameObject);
         }
-        else if (outros.gameObject.CompareTag("plataformas"))
+        else if (outros.gameObject.CompareTag("plataformas") || outros.gameObject.tag == "void")
         {
             Destroy(municao.gameObject);
         }
+        
     }
 
     void Destruindo()

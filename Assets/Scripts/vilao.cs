@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vilao : MonoBehaviour {
+public class vilao : MonoBehaviour {
 
 	public float vel = 1.0f;
 	public bool liberap = false;
@@ -13,6 +13,7 @@ public class Vilao : MonoBehaviour {
     public AudioSource amaterasu;
     public AudioClip amate;
     public GameObject tiroInimigo;
+    public int vidaVilao = 15;
 
 	// Use this for initialization
 	void Start () {
@@ -45,7 +46,9 @@ public class Vilao : MonoBehaviour {
                 transform.Translate(new Vector2(vel * Time.deltaTime, 0));
 			}
             GameObject tiro = (GameObject)Instantiate(tiroInimigo);
-            tiro.transform.position = new Vector2(transform.position.x -5, Random.Range(transform.position.y +5,transform.position.y - 6));
+            tiro.transform.position = new Vector2(transform.position.x - 5,transform.position.y);
+            Vector2 direction = Momochi.transform.position - tiro.transform.position;
+            tiro.GetComponent<TiroInimigo>().SetDirection(direction);
 		}
 		// Animações
 		if (liberap == true) 
@@ -74,6 +77,10 @@ public class Vilao : MonoBehaviour {
 			animator.SetBool ("voidparado", false);
 			animator.SetBool ("voidgiro", true);
 		}
+        if (vidaVilao <= 0){
+            animator.SetBool("voidMorreu",true);
+            Invoke("Death", 1f);
+        }
 	}
 	void Flip()
 	{
@@ -85,6 +92,20 @@ public class Vilao : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.CompareTag("Player")){
 			liberap = true;
-		} 
+		}
+       
 	}
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "tiro")
+        {
+            vidaVilao--;
+        }
+    }
+
+    void Death()
+    {
+        Destroy(gameObject);
+    }
 }
