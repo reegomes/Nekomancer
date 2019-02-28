@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PuzzleTwo : MonoBehaviour
 {
-    [SerializeField] GameObject plataformL, plataformR,plPOINT,prPOINT, whell, 
-        doorclosed,dooropen,loki, b1,b2,b3,player;
-    [SerializeField]private bool islocked,roll,solved,activate;
+    [SerializeField] GameObject plataformL, plataformR, plPOINT, prPOINT, whell, doorclosed, dooropen, loki, b1, b2, b3, player;
+    [SerializeField]private bool islocked, roll, solved, activate;
     [SerializeField] Transform p1, p2, p3;
     [SerializeField] Vector3 b1t, b2t, b3t;
     [SerializeField] Quaternion  wheell;
