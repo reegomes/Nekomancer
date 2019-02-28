@@ -4,20 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - plataformas
-  - caixas
-  - ativador
-  - fundodatela
-  - tiro
-  - escada
-  - plataforma
-  - paraescada
-  - buracomorte
-  - buracovolta
-  - sobearmadilha
-  - void
-  - audiochange
-  - voidTiro
+  - Enemy
+  - bau
+  - Platform
+  - Text
   layers:
   - Default
   - TransparentFX
@@ -27,15 +17,15 @@ TagManager:
   - UI
   - 
   - 
-  - plataformas
+  - visualItens
   - agua
-  - ativador
-  - fundodatela
-  - tiro
-  - Momochi
+  - Plataform
+  - 
+  - Enemy
+  - Player
   - fundo
-  - 
-  - 
+  - box
+  - interact
   - 
   - 
   - 
@@ -55,33 +45,36 @@ TagManager:
   - name: fundodatela
     uniqueID: 3913494993
     locked: 0
-  - name: blocodefundo
-    uniqueID: 4290981397
-    locked: 0
-  - name: plataformas
-    uniqueID: 2109168503
-    locked: 0
-  - name: pixes
-    uniqueID: 2799440605
+  - name: caixas
+    uniqueID: 1718005451
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: caixas
-    uniqueID: 1718005451
-    locked: 0
   - name: agua
     uniqueID: 1974340187
     locked: 0
-  - name: ativador
-    uniqueID: 2089510657
-    locked: 0
   - name: tiro
     uniqueID: 2969567533
+    locked: 0
+  - name: back
+    uniqueID: 3168294807
+    locked: 0
+  - name: plataformas
+    uniqueID: 2109168503
     locked: 0
   - name: Player
     uniqueID: 3879765491
     locked: 0
   - name: correntes
     uniqueID: 1414666975
+    locked: 0
+  - name: visual
+    uniqueID: 1473484491
+    locked: 0
+  - name: bau
+    uniqueID: 3533322949
+    locked: 0
+  - name: canvas
+    uniqueID: 2657487513
     locked: 0
