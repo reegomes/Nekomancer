@@ -12,8 +12,11 @@ Nosso **DevTeam**:
 
  1. Terminar a fase de tutorial
  2. Terminar o Menu
- 3. Começar a primeira fase
- 4. Melhorar os áudios e efeitos
- 5. Melhorias nos Sprites
+ 3. Melhorar os áudios e efeitos
+ 4. Melhorias nos Sprites
+ 5. Ajustes na movimentação
+ 6. Ajustes no controle
+ 7. Melhorar o feedback pós morte
+ 8. Transição das telas 
 
--> Nekomancer 2018 - Todos os direitos reservados.
+-> Nekomancer 2019 - Todos os direitos reservados.
