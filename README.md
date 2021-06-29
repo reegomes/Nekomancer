@@ -20,3 +20,9 @@ Nosso **DevTeam**:
  8. Transição das telas 
 
 -> Nekomancer 2019 - Todos os direitos reservados.
+
+
+
+For more information see the link below:
+<p>
+https://reegomes.itch.io/nekomancer
